@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RotateMe : MonoBehaviour
 {
+    public float speed = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,7 @@ public class RotateMe : MonoBehaviour
     void Update()
     {
         Vector3 rot = transform.eulerAngles;
-        rot.z += 1;
+        rot.z += speed;
         transform.eulerAngles = rot;
     }
 }

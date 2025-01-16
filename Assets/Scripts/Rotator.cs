@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pointer : MonoBehaviour
+public class Rotator : MonoBehaviour
 {
+    public float speed = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -14,10 +15,6 @@ public class Pointer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouse.z = 0;
-       Vector2 direction = mouse - transform.position;
-
-       transform.up = direction;
+        transform.Rotate(0, 0, speed * Time.deltaTime);
     }
 }

@@ -15,12 +15,13 @@ public class LerpDemo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        t += Time.deltaTime;
         transform.position = Vector2.Lerp(start.position, end.position, curve.Evaluate(t));
     }
 }

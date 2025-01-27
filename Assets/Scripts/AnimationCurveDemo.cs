@@ -18,6 +18,8 @@ public class AnimationCurveDemo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
         t += Time.deltaTime;
 
         if(t > 1)
